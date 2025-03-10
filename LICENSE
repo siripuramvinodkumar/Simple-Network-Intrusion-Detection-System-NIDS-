@@ -1,0 +1,15 @@
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Code
+
+```text name=requirements.txt
+scapy
+matplotlib
+
+.gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+nids.log

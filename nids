@@ -1,0 +1,50 @@
+nids/__init__.py
+# This file is intentionally left blank to indicate that this directory is a package.
+
+nids/packet_sniffer.py
+v2
+from scapy.all import sniff, IP, TCP, UDP, ICMP
+
+def packet_callback(packet):
+    if IP in packet:
+        ip_src = packet[IP].src
+
+nids/protocol_analyzer.py
+v2
+from scapy.all import IP, TCP, UDP, ICMP
+
+def analyze_packet(packet):
+    if IP in packet:
+        ip_src = packet[IP].src
+
+nids/signature_based_detection.py
+v2
+SIGNATURES = [
+    {"pattern": "TCP Packet", "description": "Potential TCP attack"},
+    {"pattern": "UDP Packet", "description": "Potential UDP attack"},
+    {"pattern": "ICMP Packet", "description": "Potential ICMP attack"},
+]
+
+nids/anomaly_based_detection.py
+v2
+import time
+
+THRESHOLD = 10  # Threshold for number of packets per second
+
+class AnomalyDetector:
+
+nids/logger.py
+v2
+import logging
+
+logging.basicConfig(filename="nids.log", level=logging.INFO)
+
+def log_event(event):
+
+nids/visualizer.py
+v2
+import matplotlib.pyplot as plt
+
+def visualize_traffic(packet_counts):
+    protocols = list(packet_counts.keys())
+    counts = list(packet_counts.values())

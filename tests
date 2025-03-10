@@ -1,0 +1,34 @@
+tests/test_packet_sniffer.py
+import unittest
+from unittest.mock import patch
+from scapy.all import IP, TCP
+from nids.packet_sniffer import packet_callback
+
+
+tests/test_protocol_analyzer.py
+import unittest
+from scapy.all import IP, TCP, UDP, ICMP
+from nids.protocol_analyzer import analyze_packet
+
+class TestProtocolAnalyzer(unittest.TestCase):
+
+tests/test_signature_based_detection.py
+import unittest
+from nids.signature_based_detection import detect_signatures
+
+class TestSignatureBasedDetection(unittest.TestCase):
+
+
+tests/test_anomaly_based_detection.py
+import unittest
+import time
+from nids.anomaly_based_detection import AnomalyDetector
+
+class TestAnomalyBasedDetection(unittest.TestCase):
+
+tests/test_logger.py
+import unittest
+import logging
+from nids.logger import log_event
+
+class TestLogger(unittest.TestCase):

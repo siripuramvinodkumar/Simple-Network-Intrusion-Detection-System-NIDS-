@@ -1,0 +1,4 @@
+requirements.txt
+scapy
+matplotlib
+This file specifies the dependencies needed for the project: scapy for packet sniffing and analysis, and matplotlib for visualization.
